@@ -14,6 +14,16 @@ print("Started clicking!")
 print()
 count = 0
 
+# Ask the user whether they want to wait before the clicks or not
+wait = input("Do you want to wait for a task to finish?[y/n]: ")
+if(wait == "y"):
+   hour_req = int(input("Hours: "))
+   min_req = int(input("Minutes: "))
+   sec_req = int(input("Seconds: "))
+   total_req = hour_req * 3600 + min_req * 60 + sec_req 
+   print("Sleeping for: " + str(hour_req) + ":"+ str(min_req) + ":"+ str(sec_req))
+   time.sleep(total_req)
+
 # Clicking loop
 while (count < no_clicks):
    count += 1
